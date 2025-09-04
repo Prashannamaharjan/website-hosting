@@ -1,0 +1,242 @@
+
+.about-container{
+    transform: translate(40%, 0%);
+    height: 40vh;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    background-color: #5a5a5a;
+    border-top-left-radius: 10vh;
+    /* border-bottom-right-radius: 50px; */
+    width: 120vh;
+}
+
+.aimg{
+    width: 400px;
+    height: 500px;
+    left: 50%;
+    object-fit: cover;
+    position: absolute;
+    transform: translate(70%, -0%);
+}
+
+.about-me{
+    /* padding-left: inherit; */
+    text-align: justify;
+    background-color: bisque;
+    position: absolute;
+    left: 40%; 
+    transform: translate(-50%, 0%); /* Perfect centering */
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+/* Mobile Devices (320px - 480px) */
+@media screen and (max-width: 480px) {
+    .about-container {
+        transform: none;
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        border-top-left-radius: 5vh;
+        padding: 20px 15px;
+        margin: 20px 0;
+    }
+    
+    .aimg {
+        position: relative;
+        width: 100%;
+        max-width: 280px;
+        height: 350px;
+        left: auto;
+        transform: none;
+        margin-bottom: 20px;
+        border-radius: 10px;
+    }
+    
+    .about-me {
+        position: relative;
+        left: auto;
+        transform: none;
+        width: 100%;
+        padding: 15px;
+        margin-top: 15px;
+    }
+}
+
+/* Small Tablets (481px - 768px) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .about-container {
+        transform: none;
+        width: 90%;
+        height: auto;
+        margin: 30px auto;
+        padding: 25px 20px;
+        border-top-left-radius: 8vh;
+        flex-direction: column;
+    }
+    
+    .aimg {
+        position: relative;
+        width: 350px;
+        height: 400px;
+        left: auto;
+        transform: none;
+        margin-bottom: 25px;
+        border-radius: 12px;
+    }
+    
+    .about-me {
+        position: relative;
+        left: auto;
+        transform: none;
+        width: 100%;
+        padding: 20px;
+        margin-top: 20px;
+    }
+}
+
+/* Large Tablets (769px - 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .about-container {
+        transform: translate(20%, 0%);
+        width: 80vh;
+        height: 35vh;
+        border-top-left-radius: 8vh;
+    }
+    
+    .aimg {
+        width: 300px;
+        height: 380px;
+        transform: translate(50%, 0%);
+    }
+    
+    .about-me {
+        left: 35%;
+        padding: 15px;
+        width: 55%;
+        font-size: 0.9em;
+    }
+}
+
+/* Desktop (1025px - 1200px) */
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+    .about-container {
+        transform: translate(30%, 0%);
+        width: 110vh;
+        height: 38vh;
+    }
+    
+    .aimg {
+        width: 350px;
+        height: 450px;
+        transform: translate(60%, 0%);
+    }
+    
+    .about-me {
+        left: 38%;
+        padding: 15px 25px;
+        width: 50%;
+    }
+}
+
+/* Large Desktop (1201px - 1600px) */
+@media screen and (min-width: 1201px) and (max-width: 1600px) {
+    .about-container {
+        transform: translate(35%, 0%);
+        width: 125vh;
+        height: 42vh;
+    }
+    
+    .aimg {
+        width: 380px;
+        height: 480px;
+        transform: translate(65%, 0%);
+    }
+    
+    .about-me {
+        left: 40%;
+        padding: 0px 10px;
+        width: 85vh;
+    }
+}
+
+/* Extra Large Desktop (1600px and above) */
+@media screen and (min-width: 1601px) {
+    .about-container {
+        transform: translate(30%, 0%);
+        width: 120vh;
+        height: 45vh;
+    }
+    
+    .aimg {
+        width: 420px;
+        height: 520px;
+        transform: translate(70%, 0%);
+    }
+    
+    .about-me {
+        left: 47%;
+        padding: 3px 3px;
+        width: 60%;
+        font-size: 1.1em;
+    }
+}
+
+/* Landscape Orientation for Mobile */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+    .about-container {
+        height: auto;
+        min-height: 50vh;
+    }
+    
+    .aimg {
+        width: 40%;
+        max-width: 250px;
+        height: 300px;
+    }
+    
+    .about-me {
+        width: 90%;
+        font-size: 0.9em;
+    }
+}
+
+/* Height-based adjustments for very short screens */
+@media screen and (max-height: 600px) {
+    .about-container {
+        height: auto;
+        min-height: 300px;
+        padding: 15px;
+    }
+    
+    .aimg {
+        height: 350px;
+    }
+    
+    .about-me {
+        padding: 10px 15px;
+        font-size: 0.9em;
+    }
+}
+
+
+
+
+
+/* .about-me{
+    padding-left: 100px;
+    /* display: flex; */
+    /* text-align: justify; */
+/* } */
+ 
+
+/* .about-me p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    flex: 1;
+    text-align: justify;
+    background-color: #5a5a5a;
+
+    
+}

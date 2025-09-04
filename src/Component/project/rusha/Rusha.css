@@ -1,0 +1,180 @@
+.Rusha h1{
+    color: black;
+    margin-bottom: 3%;
+}
+
+.Rusha {
+  padding: 2rem;
+  text-align: center;
+  max-width: 100%;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.Rusha-photos {
+  /* display: flex;
+  flex-direction: column; */
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.Rusha-photo-item {
+  width: 100%;
+  max-width: 600px;
+  height: 400px; /* Fixed height for consistency */
+  overflow: hidden;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.Rusha-photo-item:hover {
+  transform: scale(1.02);
+}
+
+.Rusha-photo-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This will crop the image to fit the container */
+  object-position: center; /* Focus on the center of the image */
+}
+
+/* For portrait images, we might want to adjust the positioning */
+.portrait img {
+  object-position: top center; /* Focus on the top for portraits (good for people) */
+}
+
+/* Small Tablets (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .Rusha {
+    padding: 1.5rem;
+    max-width: 100%;
+  }
+  
+  .Rusha h1 {
+    font-size: 1.75rem;
+    margin-bottom: 2.5%;
+  }
+  
+  .Rusha-photos {
+    gap: 1.5rem;
+  }
+  
+  .Rusha-photo-item {
+    height: 300px;
+    max-width: 500px;
+  }
+}
+
+/* Large Tablets & Small Laptops (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .Rusha {
+    padding: 2rem;
+    max-width: 100%;
+  }
+  
+  .Rusha-photo-item {
+    height: 350px;
+    max-width: 550px;
+  }
+  
+  .Rusha-photos {
+    gap: 1.75rem;
+  }
+}
+
+/* Desktop (1025px - 1200px) */
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .Rusha {
+    padding: 2.5rem;
+    max-width: 100%;
+  }
+  
+  .Rusha-photo-item {
+    height: 380px;
+    max-width: 580px;
+  }
+}
+
+/* Large Desktop (1201px and above) */
+@media (min-width: 1201px) {
+  .Rusha {
+    padding: 3rem;
+    max-width: 100%;
+  }
+  
+  .Rusha-photo-item {
+    height: 400px;
+    max-width: 600px;
+  }
+  
+  .Rusha-photos {
+    gap: 2.5rem;
+  }
+}
+
+/* Extra Large Screens (1600px and above) */
+@media (min-width: 1600px) {
+  .Rusha {
+    max-width: 100%;
+    padding: 4rem;
+  }
+  
+  .Rusha-photo-item {
+    height: 450px;
+    max-width: 700px;
+  }
+  
+  .Rusha-photos {
+    gap: 3rem;
+  }
+}
+
+/* Orientation-specific adjustments */
+@media (max-height: 500px) and (orientation: landscape) {
+  .Rusha-photo-item {
+    height: 300px;
+  }
+  
+  .Rusha {
+    padding: 1rem 2rem;
+  }
+}
+
+/* High-resolution displays (Retina) */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .Rusha-photo-item img {
+    /* Ensure high-quality images for retina displays */
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+  
+  .Rusha {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    /* Consider using higher resolution gradient or image for retina */
+  }
+}
+
+/* Additional responsive adjustments for very small mobile devices */
+@media (max-width: 320px) {
+  .Rusha-photo-item {
+    height: 200px;
+  }
+  
+  .Rusha h1 {
+    font-size: 1.25rem;
+  }
+}
+
+/* Adjustments for touch devices */
+@media (hover: none) and (pointer: coarse) {
+  .Rusha-photo-item:hover {
+    transform: none; /* Disable hover effects on touch devices */
+  }
+  
+  .Rusha-photo-item:active {
+    transform: scale(0.98); /* Add tap feedback instead */
+  }
+}

@@ -1,0 +1,204 @@
+
+nav{
+    width: 100%;
+    background: #333;
+    color: #fff;
+    padding: 4px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+    font-size: 30px;
+    /* display: flex;
+    font-family: 'Poppins', sans-serif;
+    justify-content: space-between;
+    font-size: 30px;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgb(56, 56, 56);
+    top: 0;
+    left: 0;
+    margin: 0px;
+    z-index: 10; */
+}
+
+nav ul li {
+    /* text-decoration: none; */
+    color: rgb(255, 255, 255);
+    display: inline; /*aline text horizentally*/
+    list-style: none;
+    margin: 7px 20px;
+    /* font-size: 15px; */
+    cursor: pointer;
+}
+
+.navlogo{
+    width: 150px;
+    height: 50px;   
+    padding-left: 10px; 
+}
+
+
+/* Hide menu toggle by default on larger screens */
+.menu-toggle {
+    display: none;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+/* Mobile Devices (320px - 480px) */
+@media screen and (max-width: 480px) {
+    nav {
+        padding: 6px 0;
+        font-size: 16px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    nav ul {
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        background: #444;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px 0;
+        margin: 0;
+    }
+    
+    nav ul.show {
+        display: flex;
+    }
+    
+    nav ul li {
+        display: block;
+        margin: 10px 20px;
+        text-align: center;
+        font-size: 18px;
+    }
+    
+    .navlogo {
+        width: 120px;
+        height: 40px;
+        padding-left: 15px;
+    }
+    
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* Small Tablets (481px - 768px) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    nav {
+        font-size: 20px;
+        padding: 5px 0;
+    }
+    
+    nav ul li {
+        margin: 7px 15px;
+        font-size: 18px;
+    }
+    
+    .navlogo {
+        width: 130px;
+        height: 45px;
+        padding-left: 15px;
+    }
+}
+
+/* Large Tablets & Small Laptops (769px - 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    nav {
+        font-size: 24px;
+    }
+    
+    nav ul li {
+        margin: 7px 18px;
+    }
+    
+    .navlogo {
+        width: 140px;
+        height: 45px;
+    }
+}
+
+/* Desktop (1025px - 1200px) */
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+    nav {
+        font-size: 26px;
+    }
+    
+    nav ul li {
+        margin: 7px 20px;
+    }
+}
+
+/* Large Desktop (1201px and above) */
+@media screen and (min-width: 1201px) {
+    nav {
+        font-size: 30px;
+    }
+    
+    nav ul li {
+        margin: 7px 25px;
+    }
+}
+
+/* Extra Large Screens (1600px and above) */
+@media screen and (min-width: 1600px) {
+    nav {
+        padding: 8px 0;
+        font-size: 32px;
+    }
+    
+    nav ul li {
+        margin: 10px 30px;
+    }
+    
+    .navlogo {
+        width: 180px;
+        height: 60px;
+    }
+}
+
+/* Orientation-specific adjustments */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    nav {
+        padding: 4px 0;
+        font-size: 18px;
+    }
+    
+    nav ul li {
+        margin: 5px 12px;
+    }
+    
+    .navlogo {
+        width: 110px;
+        height: 35px;
+    }
+}
+
+/* High-resolution displays (Retina) */
+@media 
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi) {
+    .navlogo {
+        /* Use a higher resolution version of your logo */
+        /* background-image: url('navlogo@2x.png'); */
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+
+/* Smooth scrolling offset adjustment for fixed navbar */
+html {
+    scroll-padding-top: 70px;
+}

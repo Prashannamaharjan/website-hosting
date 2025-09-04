@@ -1,0 +1,181 @@
+.analog-vintage h1{
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+.analog-vintage {
+  padding: 2rem;
+  text-align: center;
+  max-width: 100%;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.analog-vintage-photos {
+  /* display: flex;
+  flex-direction: column; */
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.analog-vintage-photo-item {
+  width: 100%;
+  max-width: 600px;
+  height: 400px; /* Fixed height for consistency */
+  overflow: hidden;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.analog-vintage-photo-item:hover {
+  transform: scale(1.02);
+}
+
+.analog-vintage-photo-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This will crop the image to fit the container */
+  object-position: center; /* Focus on the center of the image */
+}
+
+/* For portrait images, we might want to adjust the positioning */
+.portrait img {
+  object-position: top center; /* Focus on the top for portraits (good for people) */
+}
+
+/* Small Tablets (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .analog-vintage {
+    padding: 1.5rem;
+    max-width: 100%;
+  }
+  
+  .analog-vintage h1 {
+    font-size: 1.75rem;
+    margin-bottom: 2.5%;
+  }
+  
+  .analog-vintage-photos {
+    gap: 1.5rem;
+  }
+  
+  .analog-vintage-photo-item {
+    height: 300px;
+    max-width: 500px;
+  }
+}
+
+/* Large Tablets & Small Laptops (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .analog-vintage {
+    padding: 2rem;
+    max-width: 100%;
+  }
+  
+  .analog-vintage-photo-item {
+    height: 350px;
+    max-width: 550px;
+  }
+  
+  .analog-vintage-photos {
+    gap: 1.75rem;
+  }
+}
+
+/* Desktop (1025px - 1200px) */
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .analog-vintage {
+    padding: 2.5rem;
+    max-width: 100%;
+  }
+  
+  .analog-vintage-photo-item {
+    height: 380px;
+    max-width: 580px;
+  }
+}
+
+/* Large Desktop (1201px and above) */
+@media (min-width: 1201px) {
+  .analog-vintage {
+    padding: 3rem;
+    max-width: 100%;
+  }
+  
+  .analog-vintage-photo-item {
+    height: 400px;
+    max-width: 600px;
+  }
+  
+  .analog-vintage-photos {
+    gap: 2.5rem;
+  }
+}
+
+/* Extra Large Screens (1600px and above) */
+@media (min-width: 1600px) {
+  .analog-vintage {
+    max-width: 100%;
+    padding: 4rem;
+  }
+  
+  .analog-vintage-photo-item {
+    height: 450px;
+    max-width: 700px;
+  }
+  
+  .analog-vintage-photos {
+    gap: 3rem;
+  }
+}
+
+/* Orientation-specific adjustments */
+@media (max-height: 500px) and (orientation: landscape) {
+  .analog-vintage-photo-item {
+    height: 300px;
+  }
+  
+  .analog-vintage {
+    padding: 1rem 2rem;
+  }
+}
+
+/* High-resolution displays (Retina) */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .analog-vintage-photo-item img {
+    /* Ensure high-quality images for retina displays */
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+  
+  .analog-vintage {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    /* Consider using higher resolution gradient or image for retina */
+  }
+}
+
+/* Additional responsive adjustments for very small mobile devices */
+@media (max-width: 320px) {
+  .analog-vintage-photo-item {
+    height: 200px;
+  }
+  
+  .analog-vintage h1 {
+    font-size: 1.25rem;
+  }
+}
+
+/* Adjustments for touch devices */
+@media (hover: none) and (pointer: coarse) {
+  .analog-vintage-photo-item:hover {
+    transform: none; /* Disable hover effects on touch devices */
+  }
+  
+  .analog-vintage-photo-item:active {
+    transform: scale(0.98); /* Add tap feedback instead */
+  }
+}
+

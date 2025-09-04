@@ -1,0 +1,198 @@
+.manisha h1{
+    text-align: center;
+    margin-bottom: 3;
+}
+
+.manisha {
+  padding: 2rem;
+  text-align: center;
+  max-width: 100%;
+  margin: 0 auto;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.manisha-photos {
+  /* display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  flex-direction: column; */
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.manisha-photo-item {
+  width: 100%;
+  max-width: 600px;
+  height: 400px; /* Fixed height for consistency */
+  overflow: hidden;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.manisha-photo-item:hover {
+  transform: scale(1.02);
+}
+
+.manisha-photo-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This will crop the image to fit the container */
+  object-position: center; /* Focus on the center of the image */
+}
+
+/* For portrait images, we might want to adjust the positioning */
+.portrait img {
+  object-position: top center; /* Focus on the top for portraits (good for people) */
+}
+
+.card__button {
+    display: inline-block;
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    margin-top: 2rem;
+    box-shadow: 0 4px 15px rgba(118, 75, 162, 0.3);
+}
+
+
+
+/* Small Tablets (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .manisha {
+    padding: 1.5rem;
+    max-width: 100%;
+  }
+  
+  .manisha h1 {
+    font-size: 1.75rem;
+    margin-bottom: 2.5%;
+  }
+  
+  .manisha-photos {
+    gap: 1.5rem;
+  }
+  
+  .manisha-photo-item {
+    height: 300px;
+    max-width: 500px;
+  }
+}
+
+/* Large Tablets & Small Laptops (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .manisha {
+    padding: 2rem;
+    max-width: 100%;
+  }
+  
+  .manisha-photo-item {
+    height: 350px;
+    max-width: 550px;
+  }
+  
+  .manisha-photos {
+    gap: 1.75rem;
+  }
+}
+
+/* Desktop (1025px - 1200px) */
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .manisha {
+    padding: 2.5rem;
+    max-width: 100%;
+  }
+  
+  .manisha-photo-item {
+    height: 380px;
+    max-width: 580px;
+  }
+}
+
+/* Large Desktop (1201px and above) */
+@media (min-width: 1201px) {
+  .manisha {
+    padding: 3rem;
+    max-width: 100%;
+  }
+  
+  .manisha-photo-item {
+    height: 400px;
+    max-width: 600px;
+  }
+  
+  .manisha-photos {
+    gap: 2.5rem;
+  }
+}
+
+/* Extra Large Screens (1600px and above) */
+@media (min-width: 1600px) {
+  .manisha {
+    max-width: 100%;
+    padding: 4rem;
+  }
+  
+  .manisha-photo-item {
+    height: 450px;
+    max-width: 700px;
+  }
+  
+  .manisha-photos {
+    gap: 3rem;
+  }
+}
+
+/* Orientation-specific adjustments */
+@media (max-height: 500px) and (orientation: landscape) {
+  .manisha-photo-item {
+    height: 300px;
+  }
+  
+  .manisha {
+    padding: 1rem 2rem;
+  }
+}
+
+/* High-resolution displays (Retina) */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .manisha-photo-item img {
+    /* Ensure high-quality images for retina displays */
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+  
+  .manisha {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    /* Consider using higher resolution gradient or image for retina */
+  }
+}
+
+/* Additional responsive adjustments for very small mobile devices */
+@media (max-width: 320px) {
+  .manisha-photo-item {
+    height: 200px;
+  }
+  
+  .manisha h1 {
+    font-size: 1.25rem;
+  }
+}
+
+/* Adjustments for touch devices */
+@media (hover: none) and (pointer: coarse) {
+  .manisha-photo-item:hover {
+    transform: none; /* Disable hover effects on touch devices */
+  }
+  
+  .manisha-photo-item:active {
+    transform: scale(0.98); /* Add tap feedback instead */
+  }
+}

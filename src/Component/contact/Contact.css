@@ -1,0 +1,218 @@
+.contact{
+    margin: 80px auto;
+    max-width: 90%;
+    display: flex;
+    align-content: center; /*aline the content*/
+    justify-content: space-between; /* where your content want to be*/
+}
+
+.contact-col{
+    flex-basis: 48%; /* left to right how many % of place is going to use*/
+    color: rgb(0, 0, 0);
+}
+
+.contact-col h3{
+    color: #000;
+    font-weight: 500;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.contact-col img{
+    width: 25px;
+    height: 20px;
+    margin-left: 10px;
+}
+
+.contact-col p{
+    max-width: 450px;
+    list-style: 0.3;
+}
+
+.contact-col ul li{
+    align-items: center;
+    display: flex;
+    margin: 20px 0px;
+}
+
+.contact-col ul li img{
+    width: 20px ;
+    margin-right: 10px;
+    height: 15px;
+}
+
+.contact form input, .contact form textarea{
+    display: block;
+    width: 100%;
+    background: #ebecfe;
+    padding: 15px;
+    border: 0;
+    outline: 0;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    resize: none; /* it will not allow to resize the text area*/
+}
+
+.contact-col span{
+    display: block;
+    margin: 20px 0;
+}
+
+
+/* Small Tablets (481px - 768px) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .contact {
+        margin: 50px auto;
+        flex-direction: column;
+        max-width: 90%;
+    }
+    
+    .contact-col {
+        flex-basis: 100%;
+        margin-bottom: 35px;
+    }
+    
+    .contact-col h3 {
+        font-size: 25px;
+    }
+    
+    .contact-col p {
+        max-width: 100%;
+        font-size: 15px;
+    }
+    
+    .contact-col ul li {
+        font-size: 15px;
+    }
+    
+    .contact form input, .contact form textarea {
+        padding: 13px;
+        font-size: 15px;
+    }
+}
+
+/* Large Tablets (769px - 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .contact {
+        margin: 60px auto;
+        max-width: 92%;
+    }
+    
+    .contact-col {
+        flex-basis: 48%;
+    }
+    
+    .contact-col h3 {
+        font-size: 26px;
+    }
+    
+    .contact-col p {
+        max-width: 100%;
+        font-size: 15px;
+    }
+    
+    .contact form input, .contact form textarea {
+        padding: 14px;
+        font-size: 15px;
+    }
+}
+
+/* Desktop (1025px - 1200px) */
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+    .contact {
+        margin: 70px auto;
+        max-width: 88%;
+    }
+    
+    .contact-col h3 {
+        font-size: 28px;
+    }
+    
+    .contact-col p {
+        font-size: 16px;
+    }
+}
+
+/* Large Desktop (1201px - 1600px) */
+@media screen and (min-width: 1201px) and (max-width: 1600px) {
+    .contact {
+        margin: 80px auto;
+        max-width: 85%;
+    }
+    
+    .contact-col h3 {
+        font-size: 30px;
+    }
+    
+    .contact-col p {
+        font-size: 16px;
+        max-width: 500px;
+    }
+}
+
+/* Extra Large Desktop (1601px and above) */
+@media screen and (min-width: 1601px) {
+    .contact {
+        margin: 90px auto;
+        max-width: 80%;
+    }
+    
+    .contact-col h3 {
+        font-size: 32px;
+    }
+    
+    .contact-col p {
+        font-size: 17px;
+        max-width: 550px;
+    }
+    
+    .contact form input, .contact form textarea {
+        padding: 18px;
+        font-size: 16px;
+    }
+}
+
+/* Landscape Orientation for Mobile/Tablet */
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+    .contact {
+        margin: 50px auto;
+    }
+    
+    .contact-col {
+        flex-basis: 100%;
+    }
+}
+
+/* Height-based adjustments for short screens */
+@media screen and (max-height: 600px) and (min-width: 769px) {
+    .contact {
+        margin: 50px auto;
+    }
+    
+    .contact-col h3 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+    
+    .contact-col ul li {
+        margin: 12px 0;
+    }
+    
+    .contact form input, .contact form textarea {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+/* High DPI Screens */
+@media 
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi) {
+    .contact-col img,
+    .contact-col ul li img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
