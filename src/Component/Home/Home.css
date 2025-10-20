@@ -22,20 +22,19 @@
     display: flex;
     /* text-align: center; */
     /* font-size: 50px; */
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     background-position: center;
     background-size: cover;
-    
 }
 
 img{
     width:1000px;
     height: 1000px;
     object-fit: contain;
-    vertical-align: middle;
-    
+    vertical-align: middle;  
 }
+
 .home-text{
     padding: 20px;
     font-family: 'Poppins', sans-serif;
@@ -140,93 +139,98 @@ img{
     }
 }
 
-/* Small Tablets (481px - 768px) */
-@media screen and (min-width: 481px) and (max-width: 768px) {
-    .home-container {
-        flex-direction: column; /* Stack vertically */
-        padding: 25px;
-        gap: 2rem;
-        height: auto; /* Allow container to expand */
-        min-height: 75vh; /* Still fill viewport */
-        justify-content: flex-start; /* Align to top */
-    }
-    
-    .home-container img {
-        width: 300px; /* Appropriate size for tablets */
-        height: 300px;
-        order: 1; /* Image comes first */
-        margin-top: 30px;
-    }
+/* =============================
+   MEDIA QUERIES FOR HOME PAGE
+   ============================= */
 
-    .home-text {
-        order: 2; /* Text comes after image */
-        font-size: 18px;
-        text-align: center; /* Center align for better appearance */
-        padding: 15px;
-    }
-    
-    .home-text h1 {
-        font-size: 28px;
-        padding: 0; /* Remove large padding */
-        justify-content: center; /* Center the heading */
-        flex-wrap: wrap; /* Allow text to wrap */
-    }
-    
-    .Text-changing {
-        font-size: 28px;
-        height: 50px;
-        justify-content: center; /* Center the animated text */
-    }
-    
-    .role-container {
-        height: 50px;
-    }
-    
-    .me {
-        font-size: 16px;
-        text-align: center; /* Center the description */
-        margin: 0 auto; /* Center block */
-        max-width: 90%; /* Limit width for better readability */
-    }
+/* 📱 For Mobile Devices (max-width: 600px) */
+@media screen and (max-width: 600px) {
+  .home-container {
+    flex-direction: column;        /* stack image and text vertically */
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: 40px 20px;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  img {
+    width: 90%;
+    height: auto;
+    max-width: 350px;
+  }
+
+  .home-text {
+    padding: 0;
+    font-size: 18px;
+  }
+
+  .home-text h1 {
+    font-size: 28px;
+    padding: 0;
+    justify-content: center;
+  }
+
+  .Text-changing {
+    font-size: 24px;
+    height: 40px;
+  }
+
+  .role {
+    padding-left: 5px;
+    font-size: 24px;
+  }
+
+  .me {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+  }
 }
 
-/* Large Tablets & Small Laptops (769px - 1024px) */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-    .home-container {
-        flex-direction: row;
-        padding: 30px;
-        gap: 3rem;
-        justify-content: space-around;
-    }
-    
-    .home-text {
-        font-size: 22px;
-        text-align: left;
-        flex: 1;
-    }
-    
-    .home-text h1 {
-        font-size: 40px;
-        padding: 0 40px;
-        align-items: flex-start;
-    }
-    
-    .Text-changing {
-        font-size: 32px;
-        height: 60px;
-        justify-content: flex-start;
-    }
-    
-    img {
-        max-width: 45%;
-        height: auto;
-    }
-    
-    .me {
-        text-align: left;
-        max-width: 100%;
-        font-size: 16px;
-    }
+/* 💻 For Tablets (min-width: 601px) and (max-width: 1024px) */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  .home-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: 60px 30px;
+    gap: 3rem;
+  }
+
+  img {
+    width: 80%;
+    height: auto;
+    max-width: 500px;
+  }
+
+  .home-text {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .home-text h1 {
+    font-size: 36px;
+    padding: 0;
+    justify-content: center;
+  }
+
+  .Text-changing {
+    font-size: 32px;
+    height: 50px;
+  }
+
+  .role {
+    padding-left: 8px;
+    font-size: 32px;
+  }
+
+  .me {
+    font-size: 15px;
+    text-align: center;
+  }
 }
 
 /* Desktop (1025px - 1200px) */

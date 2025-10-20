@@ -20,15 +20,22 @@
 }
 
 .card__project{
-    display: grid;
+    display: flex;
     row-gap: 5rem;
+    flex-direction: row;
     /* column-gap: 1rem; */
 }
 
 .card_artical{
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
     
+}
+
+.card_artical img{
+    max-width: 100%;
+    height: 490px;
+    transition: transform .3s;
 }
 
 .card__img{
@@ -133,188 +140,144 @@
     }
 }
 
-
-
-/* ===== MEDIA QUERIES ===== */
-
-/* Mobile Devices (320px - 480px) */
-@media screen and (max-width: 480px) {
-    .project {
-        margin-inline: 1rem;
-        padding-block: 3rem;
-    }
-    
-    .card__project {
-        row-gap: 3rem;
-    }
-    
-    .card__img {
-        width: 280px;
-    }
-    
-    .card__data {
-        width: 240px;
-        padding: 1rem 1.5rem;
-    }
-    
-    .card__description {
-        margin-bottom: 1.5rem;
-        font-size: 0.8rem;
-    }
+.imageRevel {
+  animation: imageRevel 1s both;
+  animation-timeline: view(90% 10%);
 }
 
-/* Small Tablets (481px - 768px) */
-@media screen and (min-width: 481px) and (max-width: 768px) {
-    .card__project {
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: 1.5rem;
-    }
-    
-    .card__img {
-        width: 300px;
-    }
-    
-    .card__data {
-        width: 260px;
-    }
+@keyframes imageRevel {
+  from{
+    filter: saturate(0%) contrast(0%) brightness(.1) blur(10px);
+    opacity: 0;
+    scale: 0;
+    transform: 0 4rem;
+  }
+  to{
+    filter: none;
+    opacity: 1;
+    scale: 1;
+    transform: 0 0rem;
+  }
 }
 
-/* Large Tablets & Small Laptops (769px - 1024px) */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-    .card__project {
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: 2rem;
-    }
-    
-    .card__img {
-        width: 320px;
-    }
-    
-    .card__data {
-        width: 280px;
-    }
-    
-    .project {
-        padding-block: 4rem;
-    }
+/* =============================
+   MEDIA QUERIES FOR RESPONSIVE DESIGN
+   ============================= */
+
+/* For small screens (phones) */
+@media screen and (max-width: 600px) {
+  .project {
+    margin-inline: 1rem;
+    padding-block: 3rem;
+  }
+
+  .card__project {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 3rem;
+  }
+
+  .card_artical img {
+    height: 320px;
+    width: 100%;
+  }
+
+  .card__data {
+    width: 90%;
+    bottom: -8rem;
+    padding: 1rem 1.25rem;
+  }
+
+  .card__description {
+    font-size: 0.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .card__title {
+    font-size: 1rem;
+  }
+
+  .card__button {
+    font-size: 0.8rem;
+  }
+}
+.imageRevel {
+  animation: none !important;
+  filter: none !important;
+  opacity: 1 !important;
+  transform: none !important;
+  scale: 1 !important;
 }
 
-/* Desktop (1025px - 1200px) */
-@media screen and (min-width: 1025px) and (max-width: 1200px) {
-    .card__project {
-        grid-template-columns: repeat(3, 1fr);
-        column-gap: 1.5rem;
-    }
-    
-    .card__img {
-        width: 300px;
-    }
-    
-    .card__data {
-        width: 260px;
-    }
+
+/* For medium screens (tablets) */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  .project {
+    margin-inline: 2rem;
+    padding-block: 4rem;
+  }
+
+  .card__project {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .card_artical img {
+    height: 400px;
+  }
+
+  .card__data {
+    width: 250px;
+    bottom: -9rem;
+    padding: 1.25rem 1.75rem;
+  }
+
+  .card__title {
+    font-size: 1.25rem;
+  }
+
+  .card__description {
+    font-size: 0.9rem;
+  }
 }
 
-/* Large Desktop (1201px and above) */
-@media screen and (min-width: 1201px) {
-    .card__project {
-        grid-template-columns: repeat(3, 1fr);
-        column-gap: 2rem;
-    }
-    
-    .card__img {
-        width: 350px;
-    }
-    
-    .card__data {
-        width: 300px;
-    }
-    
-    .project {
-        margin-inline: 2rem;
-    }
+.imageRevel {
+  animation: none !important;
+  filter: none !important;
+  opacity: 1 !important;
+  transform: none !important;
+  scale: 1 !important;
 }
 
-/* Extra Large Screens (1600px and above) */
-@media screen and (min-width: 1600px) {
-    .card__project {
-        grid-template-columns: repeat(4, 1fr);
-        column-gap: 2.5rem;
-    }
-    
-    .card__img {
-        width: 380px;
-    }
-    
-    .card__data {
-        width: 320px;
-        padding: 2rem 2.5rem;
-    }
-    
-    .project {
-        max-width: 1600px;
-        margin-inline: auto;
-    }
+
+/* For large screens (desktops) */
+@media screen and (min-width: 1120px) {
+  :root {
+    --h2-font-size: 1.5rem;
+    --small-font-size: 0.875rem;
+  }
+
+  .card__project {
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 2rem;
+  }
+
+  .card_artical img {
+    height: 490px;
+  }
+
+  .card__data {
+    width: 280px;
+    bottom: -11rem;
+  }
 }
 
-/* Orientation-specific adjustments */
-@media screen and (max-width: 768px) and (orientation: landscape) {
-    .card__project {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .project {
-        padding-block: 2rem;
-    }
-}
-
-@media screen and (max-width: 480px) and (orientation: portrait) {
-    .card__img {
-        width: 260px;
-    }
-    
-    .card__data {
-        width: 220px;
-        padding: 0.8rem 1.2rem;
-    }
-}
-
-/* High-resolution displays (Retina) */
-@media 
-only screen and (-webkit-min-device-pixel-ratio: 2),
-only screen and (min-resolution: 192dpi),
-only screen and (min-resolution: 2dppx) {
-    .card__img {
-        /* Ensure images are high resolution */
-        image-rendering: -webkit-optimize-contrast;
-        image-rendering: crisp-edges;
-    }
-    
-    .card__button {
-        /* Improve text rendering for high-res screens */
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
-}
-
-/* Additional responsive adjustments for very small screens */
-@media screen and (max-width: 320px) {
-    .card__img {
-        width: 240px;
-    }
-    
-    .card__data {
-        width: 200px;
-        padding: 0.8rem 1rem;
-    }
-    
-    .card__description {
-        font-size: 0.75rem;
-        margin-bottom: 1rem;
-    }
-    
-    .project {
-        margin-inline: 0.5rem;
-        padding-block: 2rem;
-    }
+.imageRevel {
+  animation: none !important;
+  filter: none !important;
+  opacity: 1 !important;
+  transform: none !important;
+  scale: 1 !important;
 }

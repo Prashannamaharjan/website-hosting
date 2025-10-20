@@ -29,6 +29,11 @@
     transform: translate(-50%, 0%); /* Perfect centering */
     padding: 10px 20px;
     border-radius: 10px;
+    height: 300px;
+}
+
+.about-me p{
+    margin: 10px 10px;
 }
 
 /* Mobile Devices (320px - 480px) */
@@ -64,59 +69,86 @@
     }
 }
 
-/* Small Tablets (481px - 768px) */
-@media screen and (min-width: 481px) and (max-width: 768px) {
-    .about-container {
-        transform: none;
-        width: 90%;
-        height: auto;
-        margin: 30px auto;
-        padding: 25px 20px;
-        border-top-left-radius: 8vh;
-        flex-direction: column;
-    }
-    
-    .aimg {
-        position: relative;
-        width: 350px;
-        height: 400px;
-        left: auto;
-        transform: none;
-        margin-bottom: 25px;
-        border-radius: 12px;
-    }
-    
-    .about-me {
-        position: relative;
-        left: auto;
-        transform: none;
-        width: 100%;
-        padding: 20px;
-        margin-top: 20px;
-    }
+/* =============================
+   MEDIA QUERIES FOR ABOUT PAGE
+   ============================= */
+
+/* 📱 For Mobile Devices (max-width: 600px) */
+@media screen and (max-width: 600px) {
+  .about-container {
+    flex-direction: column;
+    transform: none;
+    width: 90%;
+    height: auto;
+    border-top-left-radius: 30px;
+    background-color: #5a5a5a;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .aimg {
+    position: relative;
+    width: 100%;
+    height: auto;
+    transform: none;
+    left: 0;
+    margin-bottom: 20px;
+  }
+
+  .about-me {
+    position: relative;
+    left: 0;
+    transform: none;
+    width: 100%;
+    height: auto;
+    background-color: bisque;
+    padding: 15px;
+    text-align: justify;
+  }
+
+  .about-me p {
+    margin: 10px 0;
+    font-size: 0.9rem;
+  }
 }
 
-/* Large Tablets (769px - 1024px) */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-    .about-container {
-        transform: translate(20%, 0%);
-        width: 80vh;
-        height: 35vh;
-        border-top-left-radius: 8vh;
-    }
-    
-    .aimg {
-        width: 300px;
-        height: 380px;
-        transform: translate(50%, 0%);
-    }
-    
-    .about-me {
-        left: 35%;
-        padding: 15px;
-        width: 55%;
-        font-size: 0.9em;
-    }
+/* 💻 For Tablets (min-width: 601px) and (max-width: 1024px) */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    transform: none;
+    width: 80%;
+    height: auto;
+    border-top-left-radius: 60px;
+    background-color: #5a5a5a;
+    margin: 0 auto;
+    padding: 30px;
+  }
+
+  .aimg {
+    position: relative;
+    width: 80%;
+    height: auto;
+    transform: none;
+    left: 0;
+    margin-bottom: 30px;
+  }
+
+  .about-me {
+    position: relative;
+    width: 90%;
+    left: 0;
+    transform: none;
+    height: auto;
+    background-color: bisque;
+    padding: 20px;
+    text-align: justify;
+  }
+
+  .about-me p {
+    font-size: 1rem;
+  }
 }
 
 /* Desktop (1025px - 1200px) */

@@ -1,8 +1,15 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base:"website-hosting"
+  base: "/website-hosting/", // 👈 repo name
+  build: {
+    rollupOptions: {
+      // force GitHub Pages fallback
+      output: {
+        manualChunks: undefined,
+      },
+    },
+  },
 })
